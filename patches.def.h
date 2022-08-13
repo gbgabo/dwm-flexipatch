@@ -167,7 +167,7 @@
 /* The systray patch adds systray for the status bar.
  * https://dwm.suckless.org/patches/systray/
  */
-#define BAR_SYSTRAY_PATCH 0
+#define BAR_SYSTRAY_PATCH 1
 
 /* Show tag symbols in the bar. */
 #define BAR_TAGS_PATCH 1
@@ -236,7 +236,7 @@
  * Set the tagindicatortype variable in config.h to INDICATOR_TOP_BAR to enable this.
  * https://dwm.suckless.org/patches/activetagindicatorbar/
  */
-#define BAR_ACTIVETAGINDICATORBAR_PATCH N/A
+#define BAR_ACTIVETAGINDICATORBAR_PATCH 1
 
 /* Alternative patch to the activetagindicatorbar patch, adds the bar below the tag
  * icon rather than above.
@@ -272,7 +272,7 @@
  *
  * https://dwm.suckless.org/patches/anybar/
  */
-#define BAR_ANYBAR_PATCH 0
+#define BAR_ANYBAR_PATCH 1
 
 /* Anybar option to place the next bar depending on previous bar's position (top or bottom) */
 #define BAR_ANYBAR_TOP_AND_BOTTOM_BARS_PATCH 0
@@ -339,7 +339,7 @@
 /* Allows the bar height to be explicitly set rather than being derived from font.
  * https://dwm.suckless.org/patches/bar_height/
  */
-#define BAR_HEIGHT_PATCH 0
+#define BAR_HEIGHT_PATCH 1
 
 /* This patch prevents dwm from drawing tags with no clients (i.e. vacant) on the bar.
  * https://dwm.suckless.org/patches/hide_vacant_tags/
@@ -445,7 +445,7 @@
  * This patch interferes with the center transient windows patches.
  * https://dwm.suckless.org/patches/alwayscenter/
  */
-#define ALWAYSCENTER_PATCH 0
+#define ALWAYSCENTER_PATCH 1
 
 /* This patch allows windows to be resized with its aspect ratio remaining constant.
  * https://dwm.suckless.org/patches/aspectresize/
@@ -664,7 +664,7 @@
  * the urgency bit on the named window. This patch activates the window instead.
  * https://dwm.suckless.org/patches/focusonnetactive/
  */
-#define FOCUSONNETACTIVE_PATCH 0
+#define FOCUSONNETACTIVE_PATCH 1
 
 /* Send "fake signals" to dwm for handling, using xsetroot. This will not conflict with the
  * status bar, which also is managed using xsetroot.
@@ -782,32 +782,6 @@
  */
 #define MOVESTACK_PATCH 0
 
-/* This patch allows you to change the names of tags during runtime.
- *
- * This is a bespoke version implemented specifically in relation to tagicons, which is integrated
- * into dwm-flexipatch. By default it uses dmenu to retrieve the new name, but this can be
- * customised via config along with the maximum text length and the format string.
- *
- * Special behaviour:
- *    - if more than one tag is selected then the name change applies to all selected tags
- *    - if tagicons is configured to have unique tags per monitor then the change only applies
- *      for the current monitor
- *    - the name change applies to the tag set that is active for the current tag:
- *       * if used in combination with BAR_ALTTAGSDECORATION_PATCH and there are clients on the
- *         given tag then the name change only applies to the ALT_TAGS_DECORATION tag set
- *       * if used in combination with the BAR_ALTERNATIVE_TAGS_PATCH and alternative tags are
- *         shown then the name change only applies to the ALTERNATIVE_TAGS tag set
- *       * if used in combination with both then BAR_ALTTAGSDECORATION_PATCH takes precedence
- *       * otherwise the name change applies to the DEFAULT_TAGS tag set
- *
- * https://dwm.suckless.org/patches/nametag/
- */
-#define NAMETAG_PATCH 0
-
-/* Variant of the above which prepends the tag number to the given string.
- * The toggle does nothing on its own and need to be enabled in combination with the above. */
-#define NAMETAG_PREPEND_PATCH 0
-
 /* Adds support for the _NET_CLIENT_LIST_STACKING atom, needed by certain applications like the
  * Zoom video conferencing application.
  * https://github.com/bakkeby/patches/wiki/netclientliststacking/
@@ -889,7 +863,7 @@
 /* This patch provides a way to move clients up and down inside the client list.
  * https://dwm.suckless.org/patches/push/
  */
-#define PUSH_PATCH 0
+#define PUSH_PATCH 1
 
 /* This patch provides a way to move clients up and down inside the client list,
  * but does not push up or down into the master area (except that it does not take
@@ -939,7 +913,7 @@
  * Additionally dwm can quit cleanly by using kill -TERM dwmpid.
  * https://dwm.suckless.org/patches/restartsig/
  */
-#define RESTARTSIG_PATCH 0
+#define RESTARTSIG_PATCH 1
 
 /* Adds rio-like drawing to resize the selected client.
  * This depends on an external tool slop being installed.
@@ -978,7 +952,7 @@
  * https://lists.suckless.org/hackers/2004/17205.html
  * https://dwm.suckless.org/patches/scratchpads/
  */
-#define SCRATCHPADS_PATCH 0
+#define SCRATCHPADS_PATCH 1
 
 /* Minor alteration of the above allowing clients to keep their size and position when shown */
 #define SCRATCHPADS_KEEP_POSITION_AND_SIZE_PATCH 0
@@ -987,7 +961,7 @@
  * feature in i3wm.
  * https://github.com/GasparVardanyan/dwm-scratchpad
  */
-#define SCRATCHPAD_ALT_1_PATCH 0
+#define SCRATCHPAD_ALT_1_PATCH 1
 
 /* This patch persists some settings across window manager restarts. These include but are not
  * limited to:
@@ -1245,7 +1219,7 @@
  * two-finger scrolling is configured in libinput.
  * https://dwm.suckless.org/patches/tapresize/
  */
-#define TAPRESIZE_PATCH 0
+#define TAPRESIZE_PATCH 1
 
 /* This patch allows you to toggle fullscreen on and off using a single shortcut key.
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-togglefullscreen-6.2.diff
@@ -1300,13 +1274,13 @@
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-vanitygaps-6.2.diff
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-cfacts-vanitygaps-6.2.diff
  */
-#define VANITYGAPS_PATCH 0
+#define VANITYGAPS_PATCH 1
 
 /* This patch adds outer gaps for the monocle layout.
  * Most gaps patches tries to avoid gaps on the monocle layout, as it is often used as a
  * fullscreen mode, hence this is enabled separately from the main vanitygaps patch.
  */
-#define VANITYGAPS_MONOCLE_PATCH 0
+#define VANITYGAPS_MONOCLE_PATCH 1
 
 /* Follow a window to the tag it is being moved to.
  * https://dwm.suckless.org/patches/viewontag/

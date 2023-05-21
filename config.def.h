@@ -836,8 +836,8 @@ static const char *scrotcmd[] 		= { "scrot", "/home/gabo/Pictures/screenshots/%Y
 /* menus */
 static const char tsearchmenu[] 	= "export TSEARCH_CONFIG=$HOME/.dotfiles/config/tinytools/tsearch.yaml; dmenu_tsearch";
 static const char tbmmenu[] 		= "export TBM_FILE=$HOME/.dotfiles/config/tinytools/tbm/bookmarks; dmenu_tbm";
-static const char dialmenu[] 		= "export TMENU_FILE=$HOME/tmenus/dial.yaml; tmenu";
-static const char focusmenu[] 		= "export TMENU_FILE=$HOME/tmenus/focus.yaml; tmenu";
+static const char dialmenu[] 		= "export TLAUNCH_FILE=$HOME/tmenus/dial.yaml; tlaunch";
+static const char focusmenu[] 		= "export TLAUNCH_FILE=$HOME/tmenus/focus.yaml; tlaunch";
 static const char *windowmenu[] 	= { "dmenu_twindow", NULL };
 static const char *passmenu[] 		= { "passmenu", NULL };
 
